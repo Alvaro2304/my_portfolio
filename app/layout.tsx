@@ -11,6 +11,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Alvaro Palero | Portfolio</title>
+        <meta name="description" content="Mechatronics Engineer focused on robotic vision and perception." />
+        <meta property="og:title" content="Alvaro Palero | Portfolio" />
+        <meta property="og:description" content="Mechatronics Engineer focused on robotic vision and perception." />
+        <meta property="og:image" content="/ap_brazil.jpeg" />
+        <meta property="og:url" content="https://alvaro2304.github.io" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
