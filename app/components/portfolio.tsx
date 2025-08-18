@@ -13,6 +13,15 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
+      title: "Stereo Visual Odometry",
+      category: "computer-vision",
+      image: "/stereo.png?height=400&width=600",
+      description: "Implemented stereo visual odometry on the KITTI dataset using two approaches: ORB descriptor matching and Lucas–Kanade (KLT) optical flow. By leveraging stereo depth, the system reconstructs 3D points and estimates motion with PnP. The ORB pipeline is more robust to appearance changes, while KLT provides a lighter, faster solution that achieves reliable results with well-tuned parameters.",
+      technologies: ["OpenCV", "C++", "Computer Vision"],
+      url: "https://github.com/Alvaro2304/stereo_vo"
+    },
+    {
+      id: 2,
       title: "Monocular Visual Odometry",
       category: "computer-vision",
       image: "/monocular.png?height=400&width=600",
@@ -21,7 +30,7 @@ export default function Portfolio() {
       url: "https://github.com/Alvaro2304/monocular"
     },
     {
-      id: 2,
+      id: 3,
       title: "Navigation Sandbox TurtleBot 4",
       category: "navigation",
       image: "/turtle4.png?height=400&width=600",
@@ -30,7 +39,7 @@ export default function Portfolio() {
       url: "https://github.com/Alvaro2304/turtlebot4_path_planning"
     },
     {
-      id: 3,
+      id: 4,
       title: "Capstone Project UTEC × Purdue",
       category: "design",
       image: "/capstone.jpeg?height=400&width=600",
@@ -39,7 +48,7 @@ export default function Portfolio() {
       url: "https://polytechnic.purdue.edu/capstone-project/utec-x-purdue-beach-cleaning-robot"
     },
     {
-      id: 4,
+      id: 5,
       title: "Beach Waste Collector Prototype",
       category: "design",
       image: "/thesis_1.png?height=400&width=600",
@@ -47,6 +56,8 @@ export default function Portfolio() {
       technologies: ["EKF", "GPS", "IMU", "Path Planning"],
       url: "https://drive.google.com/file/d/1kQcgincoPMevui0MTPidfnoNxSX_zIJr/view?usp=sharing"
     },
+    
+    
   ]
 
   const filteredProjects = projects.filter((project) =>
@@ -79,7 +90,7 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <motion.div layout className="grid gap-8 sm:grid-cols-2">
+        <motion.div layout className="grid gap-8 sm:grid-cols-2 auto-rows-fr">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
